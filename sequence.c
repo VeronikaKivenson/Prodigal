@@ -290,7 +290,8 @@ int is_stop(unsigned char *seq, int n, struct _training *tinf) {
   /* TAG */
   if(is_t(seq, n) == 1 && is_a(seq, n+1) == 1 && is_g(seq, n+2) == 1) {
     if(tinf->trans_table == 6 || tinf->trans_table == 15 ||
-       tinf->trans_table == 16 || tinf->trans_table == 22) return 0;
+       tinf->trans_table == 16 || tinf->trans_table == 22 ||
+       tinf->trans_table == 34) return 0;
     return 1;
   }
 

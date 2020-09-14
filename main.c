@@ -158,9 +158,9 @@ int main(int argc, char *argv[]) {
     }
     else if(strcmp(argv[i], "-g") == 0 || strcmp(argv[i], "-G") == 0) {
       tinf.trans_table = atoi(argv[i+1]);
-      if(tinf.trans_table < 1 || tinf.trans_table > 25 || tinf.trans_table == 7
+      if(tinf.trans_table < 1 || tinf.trans_table > 34 || tinf.trans_table == 7
          || tinf.trans_table == 8 || (tinf.trans_table >= 17 && tinf.trans_table
-         <= 20))
+         <= 20) || (tinf.trans_table >= 26 && tinf.trans_table <= 33))
         usage("Invalid translation table specified.");
       user_tt = tinf.trans_table;
       i++;
